@@ -1,1 +1,1 @@
-/Users/titus/.dotfiles/.zprezto/runcoms/zshenv
+/Users/titus/zsh-it/.zprezto/runcoms/zshenv

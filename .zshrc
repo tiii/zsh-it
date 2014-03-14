@@ -1,5 +1,5 @@
 # Set $ZDOTDIR
-export ZDOTDIR=$HOME/.dotfiles
+export ZDOTDIR=$HOME/zsh-it
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
@@ -7,8 +7,11 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # customize to your needs...
-export PATH=./bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 export EDITOR=/usr/bin/vim
+
+# reset shell env
+SHELL=$(which zsh)
 
 # npm binaries
 export PATH=/usr/local/share/npm/bin:$PATH
@@ -23,6 +26,12 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # android-sdk
 export ANDROID_SDK_ROOT=/usr/local/opt/android-sdk
 
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
 # rebuild .bashrc
-rm -f ~/.bashrc
+rm -f ~/.bashrc > /dev/null
 echo 'export PATH="'$(echo $PATH)'"' > ~/.bashrc
+
+# load aliases
+for i in $ZDOTDIR/aliases/*; do source $i; done

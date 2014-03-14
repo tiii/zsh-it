@@ -1,14 +1,13 @@
-# set .dotfiles als ZDOTDIR
-export ZDOTDIR=$HOME/.dotfiles
+echo "Setting up zprezto:"
+echo ""
 
-# softlink over needed zprezto configuration files
+echo "Link needed zprezto files.."
 setopt EXTENDED_GLOB
 for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^(README.md|zpreztorc|zshrc)(.N); do
-  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+  ln -fs "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
 
-# link .zshrc to $HOME
-ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
+echo "Link .zshrc into home.."
+ln -fs $ZDOTDIR/.zshrc $HOME/.zshrc
 
-# change to zshell as default shell
-chsh -s /bin/zsh
+echo ""

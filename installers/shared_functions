@@ -1,0 +1,8 @@
+env_variable_or_default () {
+  env_value=$(printenv $1)
+  if [[ -n $env_value ]]; then
+    echo $env_value
+  else
+    echo $2
+  fi
+}

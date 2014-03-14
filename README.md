@@ -1,0 +1,1 @@
+copy config.example to config and adjust then just call ./install.sh

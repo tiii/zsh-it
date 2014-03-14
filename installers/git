@@ -1,0 +1,20 @@
+# Configuration Variables:
+# - Needed: GIT_GLOBAL_USER GIT_GLOBAL_EMAIL
+# - Optional: GIT_GLOBAL_UI GIT_GLOBAL_PUSH_DEFAULT
+
+brew_install_if_missing git
+
+git_config_set () {
+  echo "Setting $1 to: $2"
+  git config --global $1 $2
+}
+
+echo "Configuring git:"
+echo "----------------"
+
+git_config_set color.ui $ui $(env_variable_or_default GIT_GLOBAL_UI true)
+git_config_set push.default $(env_variable_or_default GIT_GLOBAL_PUSH_DEFAULT simple)
+
+git_config_set user.name $GIT_GLOBAL_USER
+git_config_set user.email $GIT_GLOBAL_EMAIL
+echo ""

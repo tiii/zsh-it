@@ -1,1 +1,1 @@
-/Users/titus/.dotfiles/.zprezto/runcoms/zlogin
+/Users/titus/zsh-it/.zprezto/runcoms/zlogin

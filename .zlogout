@@ -1,1 +1,1 @@
-/Users/titus/.dotfiles/.zprezto/runcoms/zlogout
+/Users/titus/zsh-it/.zprezto/runcoms/zlogout

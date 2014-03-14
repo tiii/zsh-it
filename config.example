@@ -1,0 +1,9 @@
+# required parameters:
+
+export GIT_GLOBAL_USER=
+export GIT_GLOBAL_EMAIL=
+
+# optional parameters:
+
+# export GIT_GLOBAL_UI=
+# export GIT_GLOBAL_PUSH_DEFAULT=

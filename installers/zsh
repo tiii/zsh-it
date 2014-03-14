@@ -1,0 +1,27 @@
+brew_install_if_missing zsh
+
+zsh_path=$(which zsh)
+
+if [[ $zsh_path != $SHELL ]]; then
+  echo "Setting zsh as default shell:"
+
+  if [[ -z $(cat /etc/shells | grep $zsh_path) ]]; then
+    echo "Adding $zsh_path to /etc/shells"
+    sudo -s -- "echo $zsh_path >> /etc/shells"
+
+    if [[ $? != 0 ]]; then
+      echo "Change failed. Aborting Script.."
+      exit 1
+    fi
+  fi
+
+  chsh -s $zsh_path
+  if [[ $? != 0 ]]; then
+    echo "Change failed. Aborting Script.."
+    exit 1
+  fi
+
+  SHELL=$zsh_path
+fi
+
+echo ""
