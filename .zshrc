@@ -8,7 +8,10 @@ fi
 
 # customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-export EDITOR=/usr/bin/vim
+export EDITOR='vim'
+export VISUAL='vim'
+export PAGER='less'
+
 
 # reset shell env
 SHELL=$(which zsh)
