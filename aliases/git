@@ -1,4 +1,8 @@
 alias gc="git checkout"
+alias gcm="git checkout master"
+alias gc-="git checkout -"
+
+alias gm="git commit -m"
 
 alias gp="git push"
 
@@ -10,3 +14,7 @@ alias gs="git status"
 alias gm="git merge"
 
 alias gr="git rebase"
+
+alias gb="git branch"
+
+alias gd="git diff"
