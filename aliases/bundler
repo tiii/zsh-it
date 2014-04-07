@@ -1,0 +1,2 @@
+alias bx="bundle exec"
+compdef bx="bundle"
