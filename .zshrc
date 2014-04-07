@@ -23,6 +23,9 @@ export PATH=/usr/local/share/npm/bin:$PATH
 export RBENV_ROOT=/usr/local/opt/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+# relative binaries directory
+export PATH=./bin:./node_modules/.bin:$PATH
+
 # heroku
 export PATH="/usr/local/heroku/bin:$PATH"
 
