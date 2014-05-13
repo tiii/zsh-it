@@ -1,8 +1,12 @@
+alias git="noglob git"
 alias gc="git checkout"
 alias gcm="git checkout master"
 alias gc-="git checkout -"
 
-alias gm="git commit -m"
+alias ga.="git add ."
+
+alias gco="git commit"
+alias gcom="git commit -m"
 
 alias gp="git push"
 
@@ -10,6 +14,7 @@ alias gl="git pull"
 alias glr="git pull --rebase"
 
 alias gs="git status"
+alias gst="git status"
 
 alias gm="git merge"
 

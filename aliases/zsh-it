@@ -1,2 +1,3 @@
+alias zshrl="exec $SHELL"
 alias zshit="subl $ZDOTDIR"
 alias zshrc="vim $ZDOTDIR/.zshrc"
