@@ -1,4 +1,5 @@
-.zcompdump*
-.zhistory
-.zcompcache/
+.z*
+.z*/
+!.zpreztorc
+!.zshrc
 /config
