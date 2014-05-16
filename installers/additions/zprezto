@@ -1,5 +1,4 @@
 echo "Setting up zprezto:"
-echo ""
 
 echo "Link needed zprezto files.."
 setopt EXTENDED_GLOB

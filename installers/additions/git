@@ -9,8 +9,8 @@ git_config_set () {
   git config --global $1 $2
 }
 
+echo ""
 echo "Configuring git:"
-echo "----------------"
 
 git_config_set color.ui $ui $(env_variable_or_default GIT_GLOBAL_UI true)
 git_config_set push.default $(env_variable_or_default GIT_GLOBAL_PUSH_DEFAULT simple)

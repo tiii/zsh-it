@@ -5,3 +5,5 @@ source ./config
 
 echo "Loading shared functions..."
 source ./installers/shared_functions
+
+echo ""

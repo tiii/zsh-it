@@ -13,12 +13,14 @@ brew_install_if_missing () {
     brew_name=$2
   fi
 
+  echo -n "Installing $brew_name: "
   if [[ -z $(brew list | grep -e \^$1$) ]]; then
-    echo "
-    Installing $brew_name...
-    --------------------------------------
-    "
     brew install $brew_name
+    echo "...done"
+  else
+   echo "...already installed."
+  fi
+}
   else
    echo "$brew_name already installed."
    echo ""
@@ -31,13 +33,11 @@ brew_cask_install_if_missing () {
     brew_name=$2
   fi
 
+  echo -n "Installing $brew_name: "
   if [[ -z $(brew cask list | grep -e \^$1$) ]]; then
-    echo "
-    Installing $brew_name...
-    --------------------------------------
-    "
     brew cask install $brew_name
+    echo "...done."
   else
-   echo "$brew_name already installed."
+   echo "...already installed."
   fi
 }
