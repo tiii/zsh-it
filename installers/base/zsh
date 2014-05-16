@@ -1,8 +1,11 @@
 brew_install_if_missing zsh
 
 zsh_path=$(which zsh)
+default_shell_path=$(dscl . -read /Users/titus UserShell | sed '/^/ s/UserShell: //')
 
-if [[ $zsh_path != $SHELL ]]; then
+if [[ $zsh_path == $default_shell_path ]]; then
+  echo "zsh already default shell."
+else
   echo "Setting zsh as default shell:"
 
   if [[ -z $(cat /etc/shells | grep $zsh_path) ]]; then
@@ -22,6 +25,7 @@ if [[ $zsh_path != $SHELL ]]; then
   fi
 
   SHELL=$zsh_path
+  echo "zsh is now your default shell."
 fi
 
 echo ""

@@ -1,0 +1,7 @@
+ZDOTDIR=$HOME/zsh-it
+
+echo "Loading Configuration..."
+source ./config
+
+echo "Loading shared functions..."
+source ./installers/shared_functions
