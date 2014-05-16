@@ -12,19 +12,8 @@ export EDITOR='vim'
 export VISUAL='vim'
 export PAGER='less'
 
-
 # reset shell env
 SHELL=$(which zsh)
-
-# npm binaries
-export PATH=/usr/local/share/npm/bin:$PATH
-
-# rbenv
-export RBENV_ROOT=/usr/local/opt/rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-# relative binaries directory
-export PATH=./bin:./node_modules/.bin:$PATH
 
 # heroku
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -35,9 +24,12 @@ export ANDROID_SDK_ROOT=/usr/local/opt/android-sdk
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-# rebuild .bashrc
-rm -f ~/.bashrc > /dev/null
-echo 'export PATH="'$(echo $PATH)'"' > ~/.bashrc
+# load exports
+for i in $ZDOTDIR/environment/*; do source $i; done
 
 # load aliases
 for i in $ZDOTDIR/aliases/*; do source $i; done
+
+# rebuild .bashrc
+rm -f ~/.bashrc > /dev/null
+echo 'export PATH="'$(echo $PATH)'"' > ~/.bashrc
