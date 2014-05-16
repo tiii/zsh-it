@@ -1,0 +1,2 @@
+alias s="subl"
+alias s.="subl ."
