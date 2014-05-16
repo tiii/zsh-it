@@ -1,0 +1,3 @@
+brew_cask_install_if_missing alfred
+
+brew cask alfred link 2> /dev/null

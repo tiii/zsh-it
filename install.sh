@@ -17,6 +17,7 @@ echo "Setting up base:"
 echo ""
 
 source ./installers/base/homebrew
+source ./installers/base/homebrew-cask
 source ./installers/base/zsh
 
 echo "Installing additions:"

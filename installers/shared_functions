@@ -24,3 +24,20 @@ brew_install_if_missing () {
    echo ""
   fi
 }
+
+brew_cask_install_if_missing () {
+  brew_name=$1
+  if [[ -n $2 ]]; then
+    brew_name=$2
+  fi
+
+  if [[ -z $(brew cask list | grep -e \^$1$) ]]; then
+    echo "
+    Installing $brew_name...
+    --------------------------------------
+    "
+    brew cask install $brew_name
+  else
+   echo "$brew_name already installed."
+  fi
+}
