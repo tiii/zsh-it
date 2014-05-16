@@ -21,9 +21,17 @@ brew_install_if_missing () {
    echo "...already installed."
   fi
 }
+
+brew_tap_if_missing () {
+  brew_tap_name=$1
+
+  brew tap | grep $brew_tap_name > /dev/null
+  tap_found=$?
+
+  if [ $tap_found ]; then
+    echo "$brew_tap_name already tapped."
   else
-   echo "$brew_name already installed."
-   echo ""
+    brew tap $brew_tap_name
   fi
 }
 
