@@ -1,0 +1,7 @@
+casks_to_install=("alfred" "vlc" "spotify" "spotifree" "gitx-rowanj")
+
+for cask in ${casks_to_install[@]}; do
+  brew_cask_install_if_missing $cask
+done
+
+brew cask alfred link 2> /dev/null
