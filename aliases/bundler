@@ -1,3 +1,5 @@
+alias b="bundle"
 alias bi="bundle install"
 alias bx="noglob bundle exec"
+alias bc="bundle console"
 compdef bx="bundle"
