@@ -1,0 +1,7 @@
+brew_cask_install_if_missing virtualbox
+
+brew_install_if_missing boot2docker
+boot2docker init > /dev/null
+boot2docker up > /dev/null
+
+brew_install_if_missing docker
