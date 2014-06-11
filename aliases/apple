@@ -1,0 +1,4 @@
+alias restart_finder='killall Finder /System/Library/CoreServices/Finder.app'
+
+alias show_hidden_files='defaults write com.apple.finder AppleShowAllFiles YES; restart_finder'
+alias hide_hidden_files='defaults write com.apple.finder AppleShowAllFiles NO; restart_finder'
