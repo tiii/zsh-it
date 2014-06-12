@@ -17,7 +17,7 @@ brew_install_if_missing () {
   if [[ -z $(brew list | grep -e \^$1$) ]]; then
     brew install $brew_name
     SUCCESS=$?
-    if [[ SUCCESS == 0 ]]; then
+    if [[ $SUCCESS == 0 ]]; then
       echo "...done."
     else
       echo "...failed."
@@ -30,13 +30,20 @@ brew_install_if_missing () {
 brew_tap_if_missing () {
   brew_tap_name=$1
 
+  echo -n "Tapping $brew_tap_name: "
   brew tap | grep $brew_tap_name > /dev/null
   tap_found=$?
 
   if [ $tap_found ]; then
-    echo "$brew_tap_name already tapped."
+    echo "...already tapped."
   else
-    brew tap $brew_tap_name
+    brew tap $brew_tap_name > /dev/null
+    SUCCESS=$?
+    if [[ $SUCCESS == 0 ]]; then
+      echo "...done."
+    else
+      echo "...failed."
+    fi
   fi
 }
 
@@ -50,7 +57,7 @@ brew_cask_install_if_missing () {
   if [[ -z $(brew cask list | egrep -e "$cask_name($|\s)") ]]; then
     brew cask install $cask_name > /dev/null
     SUCCESS=$?
-    if [[ SUCCESS == 0 ]]; then
+    if [[ $SUCCESS == 0 ]]; then
       echo "...done."
     else
       echo "...failed."
