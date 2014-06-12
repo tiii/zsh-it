@@ -36,14 +36,14 @@ brew_tap_if_missing () {
 }
 
 brew_cask_install_if_missing () {
-  brew_name=$1
+  cask_name=$1
   if [[ -n $2 ]]; then
-    brew_name=$2
+    cask_name=$2
   fi
 
-  echo -n "Installing $brew_name: "
+  echo -n "Installing $cask_name: "
   if [[ -z $(brew cask list | grep -e \^$1$) ]]; then
-    brew cask install $brew_name
+    brew cask install $cask_name
     echo "...done."
   else
    echo "...already installed."
