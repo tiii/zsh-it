@@ -24,5 +24,12 @@ echo "Installing additions:"
 echo ""
 
 echo "`$(which zsh) ./installers/additions.zsh`"
+echo ""
+
+echo "Linking home files:"
+echo ""
+
+echo "`$(which zsh) ./installers/link_home_files.zsh`"
+echo ""
 
 echo "Installation complete!"
