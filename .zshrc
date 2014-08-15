@@ -31,5 +31,4 @@ for i in $ZDOTDIR/environment/*; do source $i; done
 for i in $ZDOTDIR/aliases/*; do source $i; done
 
 # rebuild .bashrc
-rm -f ~/.bashrc > /dev/null
-echo 'export PATH="'$(echo $PATH)'"' > ~/.bashrc
+echo 'export PATH="'$(echo $PATH)'"' >! ~/.profile
