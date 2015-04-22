@@ -1,2 +1,2 @@
 autoload -U zmv
-alias mv='noglob zmv -W'
+alias zmv='noglob zmv -W'
