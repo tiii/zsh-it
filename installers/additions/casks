@@ -1,7 +1,7 @@
 # Configuration Variables:
 # - Optional: HOMEBREW_CASK_OPTS HOMEBREW_CASK_LINK_ALFRED
 
-casks_to_install=("alfred" "vlc" "spotify" "spotifree" "gitx-rowanj" "iterm2" "slate")
+casks_to_install=("alfred" "vlc" "spotify" "spotifree" "gitx-rowanj" "iterm2" "slate" "xquartz")
 
 for cask in ${casks_to_install[@]}; do
   brew_cask_install_if_missing $(env_variable_or_default HOMEBREW_CASK_OPTS --appdir=/Applications) $cask
