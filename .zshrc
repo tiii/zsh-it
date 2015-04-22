@@ -7,7 +7,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
 export EDITOR='vim'
 export VISUAL='vim'
 export PAGER='less'
@@ -29,6 +29,9 @@ for i in $ZDOTDIR/environment/*; do source $i; done
 
 # load aliases
 for i in $ZDOTDIR/aliases/*; do source $i; done
+
+# added by travis gem
+[ -f /Users/titus/.travis/travis.sh ] && source /Users/titus/.travis/travis.sh
 
 # rebuild .bashrc
 echo 'export PATH="'$(echo $PATH)'"' >! ~/.profile

@@ -32,12 +32,11 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'utility' \
   'completion' \
-  'prompt' \
-  'fasd' \
   'history-substring-search' \
   'homebrew' \
-  'syntax-highlighting'
-
+  'syntax-highlighting' \
+  'prompt' \
+  'fasd'
 
 #
 # Editor
