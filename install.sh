@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/zsh
 
 if [[ ! -e ./install.sh ]]; then
   echo "ERROR: Script needs to be run from inside the containing folder"
@@ -23,13 +23,13 @@ source ./installers/base/zsh
 echo "Installing additions:"
 echo ""
 
-echo "`$(which zsh) ./installers/additions.zsh`"
+source ./installers/additions.zsh
 echo ""
 
 echo "Linking home files:"
 echo ""
 
-echo "`$(which zsh) ./installers/link_home_files.zsh`"
+source ./installers/link_home_files.zsh
 echo ""
 
 echo "Installation complete!"
