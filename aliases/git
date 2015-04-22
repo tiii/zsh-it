@@ -13,6 +13,8 @@ alias gp="git push"
 alias gl="git pull"
 alias glr="git pull --rebase"
 
+alias gll="git log -1"
+
 alias gs="git status"
 alias gst="git status"
 
