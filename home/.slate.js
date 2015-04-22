@@ -38,8 +38,8 @@ slate.bind("r:ctrl,alt,cmd", function() {
   slate.log('relaunch');
 });
 
-slate.bind("`:shift,cmd", function() {
-  slate.operation('hint', config.hintCharacters);
+slate.bind("a:shift,alt", function() {
+  slate.operation('hint', { characters: config.hintCharacters });
 });
 
 
