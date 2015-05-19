@@ -2,6 +2,6 @@ function ask_git_fetch_rebase_upstream() {
   read "reply?Reset to upstream. Are you sure, $(whoami)? "
   if [[ "$reply" =~ ^[Yy]$ ]]
   then
-    git fetch && git reset --hard @{u}
+    git fetch && git reset --hard "@{u}"
   fi
 }
