@@ -27,6 +27,9 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # load exports
 for i in $ZDOTDIR/environment/*; do source $i; done
 
+# load functions
+for i in $ZDOTDIR/functions/*; do source $i; done
+
 # load aliases
 for i in $ZDOTDIR/aliases/*; do source $i; done
 
