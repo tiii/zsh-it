@@ -1,6 +1,6 @@
 #! /bin/zsh
 
-if [[ ! -e ./install.sh ]]; then
+if [[ ! -e ./install ]]; then
   echo "ERROR: Script needs to be run from inside the containing folder"
   exit 1
 fi
