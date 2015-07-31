@@ -1,5 +1,15 @@
 echo "Setting up zprezto:"
 
+if [[ ! -d .zprezto ]]; then
+  echo "Installing zsprezto from github:"
+  git clone --recursive git://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+else
+  cd .zprezto
+  git pull && git submodule update --init --recursive
+  cd $ZDOTDIR
+fi
+
+
 echo "Link needed zprezto files.."
 setopt EXTENDED_GLOB
 for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^(README.md|zpreztorc|zshrc)(.N); do
