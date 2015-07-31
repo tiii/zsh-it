@@ -8,7 +8,7 @@ get_optional_env_variables () {
 
 
 get_env_variables () {
-  for i in ./installers/*; do
+  for i in ./installers/**/*; do
     line=$(cat $i | grep -e $1)
     new_variables=$(echo $line | sed "s/$2//")
     if [[ -n $new_variables ]]; then

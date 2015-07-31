@@ -5,7 +5,5 @@ export GIT_GLOBAL_EMAIL=
 
 # optional parameters:
 
-# export GIT_GLOBAL_COLOR_UI=
+# export GIT_GLOBAL_UI=
 # export GIT_GLOBAL_PUSH_DEFAULT=
-
-# export HOMEBREW_CASK_LINK_ALFRED=
