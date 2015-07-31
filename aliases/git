@@ -1,4 +1,10 @@
+alias | grep '^g[a-z|A-Z]*='\''\?git' | awk '{ gsub(/=.*/,""); print }' | while read LINE; do
+  unalias $LINE
+done
+
 alias git="noglob git"
+alias g=git
+
 alias gc="git checkout"
 alias gcm="git checkout master"
 alias gc-="git checkout -"

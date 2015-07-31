@@ -1,3 +1,4 @@
 brew_install_if_missing fasd
+brew_install_if_missing grep
 
 echo ""
