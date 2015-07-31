@@ -1,3 +1,7 @@
+# setup nvm
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
 # npm binaries
 export PATH=/usr/local/share/npm/bin:$PATH
 
