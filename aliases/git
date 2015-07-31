@@ -13,6 +13,7 @@ alias gco="git commit"
 alias gcom="git commit -m"
 
 alias gp="git push"
+alias gpf="ask_git_push_force"
 
 alias gl="git pull"
 alias glr="git pull --rebase"

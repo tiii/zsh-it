@@ -1,7 +1,20 @@
 function ask_git_fetch_rebase_upstream() {
-  read "reply?Reset to upstream. Are you sure, $(whoami)? "
-  if [[ "$reply" =~ ^[Yy]$ ]]
+  read "reply?Reset to upstream? "
+  if [[ "$reply" =~ ^[Yy][es]\?$ ]]
   then
     git fetch && git reset --hard "@{u}"
+  else
+    echo Reset to upstream aborted.
+  fi
+}
+
+function ask_git_push_force() {
+  autoload colors; colors;
+  read "reply?Are you sure, you want to $fg_bold[black]force-push $(git-branch-current)$fg_no_bold[black]$reset_color? "
+  if [[ "$reply" =~ ^[Yy][es]\?$ ]]
+  then
+    git fetch && git reset --hard "@{u}"
+  else
+    echo Force push aborted.
   fi
 }
