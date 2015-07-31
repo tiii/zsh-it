@@ -37,7 +37,8 @@ zstyle ':prezto:load' pmodule \
   'syntax-highlighting' \
   'prompt' \
   'fasd' \
-  'git'
+  'git' \
+  'ruby'
 
 #
 # Editor

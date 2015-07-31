@@ -1,3 +1,5 @@
+remove_aliases_matching '^rbb[a-z|A-Z]*='
+
 alias b="bundle"
 alias bi="bundle install"
 alias bx="noglob bundle exec"
