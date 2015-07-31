@@ -1,0 +1,6 @@
+function remove_aliases_matching() {
+  regex=$1
+  alias | ggrep $regex | awk '{ gsub(/=.*/,""); print }' | while read LINE; do
+    unalias $LINE
+  done
+}

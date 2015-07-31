@@ -1,6 +1,4 @@
-alias | grep '^g[a-z|A-Z]*='\''\?git' | awk '{ gsub(/=.*/,""); print }' | while read LINE; do
-  unalias $LINE
-done
+remove_aliases_matching '^g[a-z|A-Z]*='\''\?git'
 
 alias git="noglob git"
 alias g=git
