@@ -10,10 +10,10 @@ function ask_git_fetch_rebase_upstream() {
 
 function ask_git_push_force() {
   autoload colors; colors;
-  read "reply?Are you sure, you want to $fg_bold[black]force-push $(git-branch-current)$fg_no_bold[black]$reset_color? "
+  read "reply?Are you sure, you want to force-push $fg_bold[red]$(git-root | sed "s/.*\///")$fg_bold[black]:$(git-branch-current)$fg_no_bold[black]$reset_color? "
   if [[ "$reply" =~ ^[Yy][es]\?$ ]]
   then
-    git fetch && git reset --hard "@{u}"
+    git push -f
   else
     echo Force push aborted.
   fi
