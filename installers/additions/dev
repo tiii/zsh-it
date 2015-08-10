@@ -1,4 +1,5 @@
 brew_install_if_missing fasd
 brew_install_if_missing homebrew/dupes/grep
+brew_install_if_missing hub
 
 echo ""
