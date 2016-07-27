@@ -1,3 +1,5 @@
+# remove aliases coming from zprezto git module
+# (it's still needed for prompt info)
 remove_aliases_matching '^g[a-z|A-Z]*='\''\?git'
 
 alias git="noglob git"
