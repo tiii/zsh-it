@@ -12,18 +12,6 @@ export EDITOR='vim'
 export VISUAL='vim'
 export PAGER='less'
 
-# reset shell env
-SHELL=$(which zsh)
-
-# heroku
-export PATH="/usr/local/heroku/bin:$PATH"
-
-# android-sdk
-export ANDROID_SDK_ROOT=/usr/local/opt/android-sdk
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
 # load exports
 for i in $ZDOTDIR/environment/*; do source $i; done
 
