@@ -33,3 +33,5 @@ source ./installers/link_home_files.zsh
 echo ""
 
 echo "Installation complete!"
+echo  ""
+echo "Run \`zshrl\` to apply changes."
