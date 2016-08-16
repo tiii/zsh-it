@@ -1,3 +1,4 @@
 alias zshrl="source ~/.zshrc"
 alias zshit="atom $ZDOTDIR"
+alias zsh-it="zshit"
 alias zshrc="vim $ZDOTDIR/.zshrc"
