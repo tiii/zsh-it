@@ -21,6 +21,9 @@ for i in $ZDOTDIR/functions/*; do source $i; done
 # load aliases
 for i in $ZDOTDIR/aliases/*; do source $i; done
 
+# load hooks
+for i in $ZDOTDIR/hooks/*; do source $i; done
+
 # added by travis gem
 [ -f /Users/titus/.travis/travis.sh ] && source /Users/titus/.travis/travis.sh
 
