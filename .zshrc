@@ -8,7 +8,7 @@ fi
 
 # customize to your needs...
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
-export EDITOR='vim'
+export EDITOR='atom'
 export VISUAL='vim'
 export PAGER='less'
 

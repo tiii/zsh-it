@@ -1,1 +1,1 @@
-alias sshconf="vim ~/.ssh/config"
+alias sshconf="$EDITOR ~/.ssh/config"
