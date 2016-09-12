@@ -9,6 +9,7 @@ alias gc="git checkout"
 alias gcm="git checkout master"
 alias gc-="git checkout -"
 
+alias ga="git add"
 alias ga.="git add ."
 
 alias gco="git commit"
