@@ -18,3 +18,14 @@ function ask_git_push_force() {
     echo Force push aborted.
   fi
 }
+
+function ask_git_delete_merged_branches() {
+  autoload colors; colors;
+  read "reply?Are you sure, you want to $fg_bold[red]delete all merged branches$fg_no_bold[black]$reset_color? "
+  if [[ "$reply" =~ ^[Yy][es]\?$ ]]
+  then
+    git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d
+  else
+    echo Deletion aborted.
+  fi
+}
