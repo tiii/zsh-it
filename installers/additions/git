@@ -1,6 +1,6 @@
 # Configuration Variables:
 # - Needed: GIT_GLOBAL_USER GIT_GLOBAL_EMAIL
-# - Optional: GIT_GLOBAL_UI GIT_GLOBAL_PUSH_DEFAULT
+# - Optional: GIT_GLOBAL_UI GIT_GLOBAL_PUSH_DEFAULT GIT_GLOBAL_GPG_SIGN GIT_GLOBAL_GPG_KEY
 
 brew_install_if_missing git
 
@@ -17,4 +17,7 @@ git_config_set push.default $(env_variable_or_default GIT_GLOBAL_PUSH_DEFAULT si
 
 git_config_set user.name $GIT_GLOBAL_USER
 git_config_set user.email $GIT_GLOBAL_EMAIL
+
+git_config_set commit.gpgsign $(env_variable_or_default GIT_GLOBAL_GPG_SIGN false)
+git_config_set user.signingkey $(env_variable_or_default GIT_GLOBAL_GPG_KEY '')
 echo ""

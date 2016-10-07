@@ -7,3 +7,5 @@ export GIT_GLOBAL_EMAIL=
 
 # export GIT_GLOBAL_UI=
 # export GIT_GLOBAL_PUSH_DEFAULT=
+# export GIT_GLOBAL_GPG_SIGN=
+# export GIT_GLOBAL_GPG_KEY=
