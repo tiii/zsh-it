@@ -37,6 +37,6 @@ alias grrr="ask_git_fetch_rebase_upstream"
 alias gb="git branch"
 
 alias gd="git diff"
-alias gbdm="ask_git_delete_merged_branches"
+alias gbdm="ask_git_delete_merged_branches && git remote prune origin"
 
 alias glrp="glr && gp"
