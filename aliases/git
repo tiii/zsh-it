@@ -29,6 +29,9 @@ alias gst="git status"
 alias gm="git merge"
 
 alias gr="git rebase"
+alias gra="git rebase --abort"
+alias grc="git rebase --continue"
+
 alias grm="git fetch && git rebase master"
 alias grom="git fetch && git rebase origin/master"
 
