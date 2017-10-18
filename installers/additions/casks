@@ -1,4 +1,4 @@
-casks_to_install=("atom" "xquartz" "alfred" "vlc" "spotify" "rowanj-gitx" "iterm2" "divvy")
+casks_to_install=("atom" "xquartz" "alfred" "vlc" "spotify" "rowanj-gitx" "iterm2" "divvy" "android-sdk")
 
 for cask in ${casks_to_install[@]}; do
   brew_cask_install_if_missing $(env_variable_or_default HOMEBREW_CASK_OPTS --appdir=/Applications) $cask
