@@ -1,0 +1,5 @@
+# npm binaries
+export PATH=/usr/local/share/npm/bin:$PATH
+
+# relative binaries directory
+export PATH=./node_modules/.bin:$PATH
