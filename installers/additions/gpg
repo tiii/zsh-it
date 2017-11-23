@@ -1,0 +1,6 @@
+brew_install_if_missing gpg-agent
+
+echo "use-standard-socket" >> ~/.gnupg/gpg-agent.conf
+echo "no-tty" >> ~/.gnupg/gpg.conf
+
+echo ""
