@@ -29,3 +29,14 @@ function ask_git_delete_merged_branches() {
     echo Deletion aborted.
   fi
 }
+
+function ask_git_delete_nonexistent_branches() {
+  autoload colors; colors;
+  read "reply?Are you sure, you want to $fg_bold[red]locally delete all branches without upstream$fg_no_bold[black]$reset_color? "
+  if [[ "$reply" =~ ^[Yy][es]\?$ ]]
+  then
+    git fetch --all -p; git branch -vv | grep ": gone]" | awk '{ print $1 }' | xargs -n 1 git branch -D
+  else
+    echo Deletion aborted.
+  fi
+}
