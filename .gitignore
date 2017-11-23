@@ -2,5 +2,5 @@
 .z*/
 !.zpreztorc
 !.zshrc
-/config
+config
 .DS_Store
