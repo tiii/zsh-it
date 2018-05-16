@@ -20,4 +20,6 @@ git_config_set user.email $GIT_GLOBAL_EMAIL
 
 git_config_set commit.gpgsign $(env_variable_or_default GIT_GLOBAL_GPG_SIGN false)
 git_config_set user.signingkey $(env_variable_or_default GIT_GLOBAL_GPG_KEY '')
+
+git_config_set rerere.enabled true
 echo ""
