@@ -13,7 +13,7 @@ function ask_git_push_force() {
   read "reply?Are you sure, you want to force-push $fg_bold[red]$(git-root | sed "s/.*\///")$fg_bold[black]:$(git-branch-current)$fg_no_bold[black]$reset_color? "
   if [[ "$reply" =~ ^[Yy][es]\?$ ]]
   then
-    git push -f
+    git push --force-with-lease
   else
     echo Force push aborted.
   fi
